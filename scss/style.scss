@@ -147,7 +147,7 @@ body{
         }
         .left::before,.right::before{
 
-            content: url("/images/icon-ethereum.svg");
+            content: url("https://raw.githubusercontent.com/Alucard2169/NFT-frontEnd-Mentor/736a88e6083c8c9430e7a18ddcb8bf8b6e76c67c/images/icon-ethereum.svg");
             margin-right: .5rem;
             align-self: center;
 
@@ -160,7 +160,7 @@ body{
         }
         .right::before{
 
-            content: url("/images/icon-clock.svg");
+            content: url("https://raw.githubusercontent.com/Alucard2169/NFT-frontEnd-Mentor/b9d22ccaefc6d6667c4c1d35055b3e35cfd1b8b7/images/icon-clock.svg");
 
         }
     }
