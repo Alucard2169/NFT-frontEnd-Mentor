@@ -7,6 +7,7 @@
 }
 
 body {
+  min-width: 375px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,10 +33,17 @@ body {
   background: #14253d;
   border-radius: 20px;
   padding: 1.5rem;
+  max-width: calc(375px - 3rem);
 }
 
 .container .hero-container {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container .hero-container .hero {
@@ -44,8 +52,10 @@ body {
 }
 
 .container .hero-container .view-icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   position: absolute;
-  inset: 7.5rem;
   opacity: 0;
   -webkit-transition: opacity 250ms ease-in;
   transition: opacity 250ms ease-in;
@@ -61,7 +71,7 @@ body {
   background-color: rgba(0, 255, 247, 0);
   position: absolute;
   width: 100%;
-  height: 99%;
+  height: 100%;
   border-radius: 10px;
   -webkit-transition: background-color 250ms ease-in;
   transition: background-color 250ms ease-in;
