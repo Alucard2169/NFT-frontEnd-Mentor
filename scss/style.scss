@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap');
+
+@mixin hover {
+    color:hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background: hsl(217, 54%, 11%);
+
+}
+
+
+
+.container{
+    box-shadow: 0 2rem 10px hsl(215, 51%, 7%);
+    transition: box-shadow 200ms ease-in;
+    margin: 0 1.5rem;
+    background: hsl(216, 50%, 16%);
+    border-radius: 20px;
+    padding: 1.5rem;
+
+
+    .hero-container{
+position: relative;
+
+
+        .hero{
+
+            width: 100%;
+            border-radius: 10px;
+
+        }
+        .view-icon{
+            position: absolute;
+           inset: 7.5rem;
+           opacity: 0;
+           transition: opacity 250ms ease-in;
+        }
+    }
+}
+.container:hover{
+    box-shadow: 0 2rem 50px hsl(215, 51%, 7%);
+}
+
+.hero-container::before{
+content: "";
+    background-color:hsla(178, 100%, 50%, 0);
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    border-radius: 10px;
+    transition: background-color 250ms ease-in;
+
+}
+
+.hero-container:hover::before{
+    background:hsla(178, 100%, 50%, 0.5);
+    cursor: pointer;
+}
+.hero-container:hover  .view-icon{
+    opacity: 1;
+}
+
+.text-container{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+
+
+    
+    .about{
+        margin: 1.5rem 0 1.5rem;
+
+        .main-heading{
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .main-heading:hover{
+           @include hover;
+        }
+
+        p{
+            color: hsl(215, 51%, 70%);
+            font-weight: 300;
+            font-size: 1rem;
+        }
+    }
+
+
+    .time{
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 1.5rem;
+        .left{
+            font-weight: 600;
+            color: hsl(178, 100%, 50%);
+
+        }
+        .left::before,.right::before{
+
+            content: url("/images/icon-ethereum.svg");
+            margin-right: .5rem;
+            align-self: center;
+
+        }
+        .right{
+            font-weight: 400;
+            color:hsl(215, 51%, 70%);
+        }
+        .right::before{
+            content: url("/images/icon-clock.svg");
+        }
+    }
+
+    .author{
+        padding-top: 1.5rem;
+        border-top: 1px hsl(215, 51%, 70%) solid;
+        display: flex;
+        align-items: center;
+
+        .pp-container{
+            width: 15%;
+            display: flex;
+
+            .person-img{
+                align-self: center;
+
+                width: 100%;
+                border: 2px white solid;
+                border-radius: 100%;
+                
+            }
+        }
+
+        .by{
+            margin-left: 1rem;
+            font-size: 16px;
+            font-weight: 400;
+            color:hsl(215, 51%, 70%);
+
+            .name{
+                color: white;
+            }
+            .name:hover{
+                @include hover;
+            }
+        }
+    }
+}

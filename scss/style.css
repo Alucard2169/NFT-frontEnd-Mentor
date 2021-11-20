@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #0d192b;
+}
+
+.container {
+  -webkit-box-shadow: 0 2rem 10px #09101b;
+          box-shadow: 0 2rem 10px #09101b;
+  -webkit-transition: -webkit-box-shadow 200ms ease-in;
+  transition: -webkit-box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in;
+  transition: box-shadow 200ms ease-in, -webkit-box-shadow 200ms ease-in;
+  margin: 0 1.5rem;
+  background: #14253d;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.container .hero-container {
+  position: relative;
+}
+
+.container .hero-container .hero {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.container .hero-container .view-icon {
+  position: absolute;
+  inset: 7.5rem;
+  opacity: 0;
+  -webkit-transition: opacity 250ms ease-in;
+  transition: opacity 250ms ease-in;
+}
+
+.container:hover {
+  -webkit-box-shadow: 0 2rem 50px #09101b;
+          box-shadow: 0 2rem 50px #09101b;
+}
+
+.hero-container::before {
+  content: "";
+  background-color: rgba(0, 255, 247, 0);
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  border-radius: 10px;
+  -webkit-transition: background-color 250ms ease-in;
+  transition: background-color 250ms ease-in;
+}
+
+.hero-container:hover::before {
+  background: rgba(0, 255, 247, 0.5);
+  cursor: pointer;
+}
+
+.hero-container:hover .view-icon {
+  opacity: 1;
+}
+
+.text-container {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.text-container .about {
+  margin: 1.5rem 0 1.5rem;
+}
+
+.text-container .about .main-heading {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.text-container .about .main-heading:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.text-container .about p {
+  color: #8bacda;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.text-container .time {
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.text-container .time .left {
+  font-weight: 600;
+  color: #00fff7;
+}
+
+.text-container .time .left::before, .text-container .time .right::before {
+  content: url("/images/icon-ethereum.svg");
+  margin-right: .5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.text-container .time .right {
+  font-weight: 400;
+  color: #8bacda;
+}
+
+.text-container .time .right::before {
+  content: url("/images/icon-clock.svg");
+}
+
+.text-container .author {
+  padding-top: 1.5rem;
+  border-top: 1px #8bacda solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text-container .author .pp-container {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.text-container .author .pp-container .person-img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  border: 2px white solid;
+  border-radius: 100%;
+}
+
+.text-container .author .by {
+  margin-left: 1rem;
+  font-size: 16px;
+  font-weight: 400;
+  color: #8bacda;
+}
+
+.text-container .author .by .name {
+  color: white;
+}
+
+.text-container .author .by .name:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
