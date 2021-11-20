@@ -104,6 +104,7 @@ body {
 
 .text-container .about .main-heading {
   color: white;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
