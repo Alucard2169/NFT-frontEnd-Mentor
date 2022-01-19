@@ -145,7 +145,7 @@ body {
 
 .text-container .time .left::before,
 .text-container .time .right::before {
-  content: url("/images/icon-ethereum.svg");
+  content: url("images/icon-ethereum.svg");
   margin-right: .5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -157,7 +157,7 @@ body {
 }
 
 .text-container .time .right::before {
-  content: url("/images/icon-clock.svg");
+  content: url("images/icon-clock.svg");
 }
 
 .text-container .author {
