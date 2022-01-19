@@ -23,8 +23,6 @@ body {
 }
 
 .container {
-  -webkit-box-shadow: 0 2rem 10px #09101b;
-          box-shadow: 0 2rem 10px #09101b;
   -webkit-transition: -webkit-box-shadow 200ms ease-in;
   transition: -webkit-box-shadow 200ms ease-in;
   transition: box-shadow 200ms ease-in;
@@ -104,8 +102,8 @@ body {
 
 .text-container .about .main-heading {
   color: white;
-  font-size: 18px;
   font-weight: 600;
+  font-size: 18px;
   margin-bottom: 1.5rem;
 }
 
@@ -121,7 +119,7 @@ body {
 }
 
 .text-container .time {
-  font-size: 1rem;
+  font-size: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,16 +127,25 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-container .time .left,
+.text-container .time .right {
+  font-size: .9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 200;
 }
 
 .text-container .time .left {
-  font-weight: 600;
   color: #00fff7;
 }
 
-.text-container .time .left::before, .text-container .time .right::before {
-  content: url("https://raw.githubusercontent.com/Alucard2169/NFT-frontEnd-Mentor/b9d22ccaefc6d6667c4c1d35055b3e35cfd1b8b7/images/icon-ethereum.svg");
+.text-container .time .left::before,
+.text-container .time .right::before {
+  content: url("/images/icon-ethereum.svg");
   margin-right: .5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -146,12 +153,11 @@ body {
 }
 
 .text-container .time .right {
-  font-weight: 400;
   color: #8bacda;
 }
 
 .text-container .time .right::before {
-  content: url("https://raw.githubusercontent.com/Alucard2169/NFT-frontEnd-Mentor/b9d22ccaefc6d6667c4c1d35055b3e35cfd1b8b7/images/icon-clock.svg");
+  content: url("/images/icon-clock.svg");
 }
 
 .text-container .author {
