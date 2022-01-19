@@ -2,12 +2,12 @@
 
 @mixin hover {
 
-    color:hsl(178, 100%, 50%);
+    color: hsl(178, 100%, 50%);
     cursor: pointer;
 
 }
 
-*{
+* {
 
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@
 }
 
 
-body{
+body {
 
     min-width: 375px;
     display: flex;
@@ -30,9 +30,8 @@ body{
 
 
 
-.container{
+.container {
 
-    box-shadow: 0 2rem 10px hsl(215, 51%, 7%);
     transition: box-shadow 200ms ease-in;
     margin: 0 1.5rem;
     background: hsl(216, 50%, 16%);
@@ -41,39 +40,41 @@ body{
     max-width: calc(375px - 3rem);
 
 
-    .hero-container{
+    .hero-container {
 
         position: relative;
         display: flex;
         justify-content: center;
 
 
-        .hero{
+        .hero {
 
             width: 100%;
             border-radius: 10px;
 
         }
-        .view-icon{
+
+        .view-icon {
 
             align-self: center;
-           position: absolute;
-           opacity: 0;
-           transition: opacity 250ms ease-in;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 250ms ease-in;
 
         }
     }
 }
-.container:hover{
+
+.container:hover {
 
     box-shadow: 0 2rem 50px hsl(215, 51%, 7%);
 
 }
 
-.hero-container::before{
+.hero-container::before {
 
     content: "";
-    background-color:hsla(178, 100%, 50%, 0);
+    background-color: hsla(178, 100%, 50%, 0);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -82,19 +83,20 @@ body{
 
 }
 
-.hero-container:hover::before{
+.hero-container:hover::before {
 
-    background:hsla(178, 100%, 50%, 0.5);
+    background: hsla(178, 100%, 50%, 0.5);
     cursor: pointer;
 
 }
-.hero-container:hover  .view-icon{
+
+.hero-container:hover .view-icon {
 
     opacity: 1;
 
 }
 
-.text-container{
+.text-container {
 
     font-family: 'Outfit', sans-serif;
     font-size: 18px;
@@ -102,26 +104,27 @@ body{
     flex-direction: column;
 
 
-    
-    .about{
+
+    .about {
 
         margin: 1.5rem 0 1.5rem;
 
-        .main-heading{
+        .main-heading {
 
             color: white;
             font-weight: 600;
-            margin-bottom: 1.5rem;
             font-size: 18px;
-
-        }
-        .main-heading:hover{
-
-           @include hover;
+            margin-bottom: 1.5rem;
 
         }
 
-        p{
+        .main-heading:hover {
+
+            @include hover;
+
+        }
+
+        p {
 
             color: hsl(215, 51%, 70%);
             font-weight: 300;
@@ -131,76 +134,86 @@ body{
     }
 
 
-    .time{
+    .time {
 
-        font-size: 1rem;
+        font-size: 10px;
         display: flex;
         justify-content: space-between;
         position: relative;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
 
-        .left{
+        .left,
+        .right {
+            font-size: .9rem;
+            display: flex;
+            font-weight: 200;
+        }
 
-            font-weight: 600;
+        .left {
+
             color: hsl(178, 100%, 50%);
 
 
         }
-        .left::before,.right::before{
 
-            content: url("https://raw.githubusercontent.com/Alucard2169/NFT-frontEnd-Mentor/736a88e6083c8c9430e7a18ddcb8bf8b6e76c67c/images/icon-ethereum.svg");
+        .left::before,
+        .right::before {
+
+            content: url("/images/icon-ethereum.svg");
             margin-right: .5rem;
             align-self: center;
 
         }
-        .right{
 
-            font-weight: 400;
-            color:hsl(215, 51%, 70%);
+        .right {
+
+            color: hsl(215, 51%, 70%);
 
         }
-        .right::before{
 
-            content: url("https://raw.githubusercontent.com/Alucard2169/NFT-frontEnd-Mentor/b9d22ccaefc6d6667c4c1d35055b3e35cfd1b8b7/images/icon-clock.svg");
+        .right::before {
+
+            content: url("/images/icon-clock.svg");
 
         }
     }
 
-    .author{
+    .author {
 
         padding-top: 1.5rem;
         border-top: 1px hsl(215, 51%, 70%) solid;
         display: flex;
         align-items: center;
 
-        .pp-container{
+        .pp-container {
 
             width: 15%;
             display: flex;
 
-            .person-img{
+            .person-img {
 
                 align-self: center;
                 width: 100%;
                 border: 2px white solid;
                 border-radius: 100%;
-                
+
             }
         }
 
-        .by{
+        .by {
 
             margin-left: 1rem;
             font-size: 16px;
             font-weight: 400;
-            color:hsl(215, 51%, 70%);
+            color: hsl(215, 51%, 70%);
 
-            .name{
+            .name {
 
                 color: white;
 
             }
-            .name:hover{
+
+            .name:hover {
 
                 @include hover;
 
